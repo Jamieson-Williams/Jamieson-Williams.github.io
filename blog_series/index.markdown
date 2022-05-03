@@ -9,6 +9,7 @@ has_children: true
 permalink: /
 has_toc: false
 ---
+# Home
 
 Welcome to my blog. 
 My name is Jamieson Williams and here is where I present my very own journey to starting a career in the Information Security industry! These series of blogs are designed to showcase all the work, experience and knowledge that I've obtained while working in IT. 

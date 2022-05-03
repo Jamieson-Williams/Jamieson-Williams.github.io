@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
+# About
 
 ## Purpose of this Blog Series
 These blogs have two main purposes.

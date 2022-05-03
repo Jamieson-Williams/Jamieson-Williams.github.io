@@ -1,9 +1,11 @@
 ---
 layout: default
-title:  "Blog 0 - The Initial Blog"
+title:  "Blog 0"
 nav_order: 2
 parent: Blog Series
 ---
+# Blog 0 - The Initial Blog
+
 This is where it begins. Welcome to the very first blog in this series of My Journey to an InfoSec Career. 
 If you want to know more about what this blog series is all about, head over [here](/about). 
 Before we begin I just want to say that this blog post will only contain a summary of what I've done up to this point in my journey. Future blog posts will contain more specific information where you can follow along and see exactly what I'm doing!
