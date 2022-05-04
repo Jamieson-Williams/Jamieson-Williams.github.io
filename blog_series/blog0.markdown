@@ -10,7 +10,17 @@ This is where it begins. Welcome to the very first blog in this series of My Jou
 If you want to know more about what this blog series is all about, head over [here](/about). 
 Before we begin I just want to say that this blog post will only contain a summary of what I've done up to this point in my journey. Future blog posts will contain more specific information where you can follow along and see exactly what I'm doing!
 
-Now, let's discuss what this initial blog will include. 
+**What is covered in this blog:**
+
+* The five pillars of an Information Security professional explained
+* My experience with the five pillars
+* My homelab summary
+
+**What knowledge you will gain from this blog:**
+
+* Understanding of the five pillars
+* Resources I've used to learn the five pillars
+* Introduction to my homelab and possible ideas for building your own
 
 ### The Five Pillars Explained
 
