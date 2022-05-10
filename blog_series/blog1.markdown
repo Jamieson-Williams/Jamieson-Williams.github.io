@@ -112,3 +112,5 @@ I have also been planning on writing some network documentation, which won't be 
 In this blog post we covered ways of learning, what my routine looks like and provided some additional resources that you can start using. You now should have a rough idea on my workload and how to approach the materials covered in this blog post. Make sure you are actively doing the courses and tasks if you are following along with this series, and be on the lookout for any problems that you can solve, whether that's in a work or lab environment. 
 
 Thanks for reading, and I will see you in the next blog!
+
+<span class="fs-4">[Blog 0](/blog0.markdown){: .btn }</span> | 
