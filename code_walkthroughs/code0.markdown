@@ -14,7 +14,7 @@ In this assignment, we have to complete various functions that simulates a 'runo
 
 ## Specification
 
-There are six different functions that need to be implemented for the runoff assignment. These are vote, tabulate, print_winner, find_min, is_tie and eliminate. Below is a brief desciption of each function.
+There are six different functions that need to be implemented for the runoff assignment. These are vote, tabulate, print_winner, find_min, is_tie and eliminate. Below is a brief description of each function.
 
 * **Vote** - Takes arguments voter, rank and name to update candidates preference. If preference is successfully recorded, function returns true, otherwise false. 
 * **Tabulate** - Updates the number of votes each candidate has. Every voter votes for top preferred candidate that is not eliminated.
@@ -219,3 +219,74 @@ int find_min(void)
 ```
 
 ### Is_Tie
+
+The is_tie function takes one argument, min, which is returned from the find_min function we just covered. Is_tie will return true if all candidates have the same number of votes, otherwise it will return false. We need to loop through all candidates to determine whether their amount of votes is equal to min. 
+
+```c
+for (int z = 0; z < candidate_count; z++)
+{
+
+}
+```
+
+We now want to compare the candidates' votes with the minimum number of votes returned from the find_min function. Recall we can grab the candidates votes with `candidates[z].votes`. There is one small bug we will encounter however. We are currently looping through all the candidates. This means that eliminated candidates will also be compared. We only want candidates still in the election to be counted. So in addition to comparing the amount of votes a candidate has with min, we also need to check if the candidate is eliminated. 
+
+```c
+for (int z = 0; z < candidate_count; z++)
+{
+    if (candidates[z].eliminated == false && !(candidates[z].votes == min))
+    {
+        return false;
+    }
+}
+```
+
+This if statement needs both checks to be true, and if they are false is returned meaning that there is not a tie (not all remaining candidates have the same amount of votes). The first check is seeing if the candidate is not eliminated, just like what we wrote in the find_min function. The second check looks at the candidates votes and compares that with min. If they are not equal, we know at least one candidate has more votes than another so we can return false and continue with our program to find the winner. If every single remaining candidates' votes is equal to min, we can say this election is a tie, returning true. The completed function looks like this:
+
+```c
+bool is_tie(int min)
+{
+    for (int z = 0; z < candidate_count; z++)
+    {
+        if (candidates[z].eliminated == false && !(candidates[z].votes == min))
+        {
+            return false;
+        }
+    }
+    return true;
+}
+```
+
+### Eliminate
+
+The eliminate function takes an argument, min, exactly like the is_tie function. The function eliminates the candidates that has the min amount of votes. We can get started by first looping through each candidate. The below code should look familiar by now!
+
+```c
+for (int y = 0; y < candidate_count; y++)
+{
+
+}
+```
+
+Now we check to see if the candidate has received the minimum amount of votes. If they have, we eliminate them from the election. Recall that the candidate struct has a boolean value called eliminated, which determines whether the candidate is eliminated or not. Setting that value to true for a candidate will eliminate them from the election. This is all we need from the eliminate function. The complete code looks like this:
+
+```c
+void eliminate(int min)
+{
+    for (int y = 0; y < candidate_count; y++)
+    {
+        if (candidates[y].votes == min)
+        {
+            candidates[y].eliminated = true;
+        }
+    }
+    return;
+}
+```
+
+## Conclusion
+
+The Runoff assignment was a fun challenge. This problem set helped to re-iterate some important concepts first presented in week 2 such as how to work with arrays in C, as well as how to loop through arrays and structs to pull out the information we needed for a particular candidate. This assignment spanned over a few days and took me roughly 5 hours to complete. I recommend those new to C or Computer Science to take on this problem set.
+
+Thanks for reading, and I will see you in the next Code Walkthrough!
+
